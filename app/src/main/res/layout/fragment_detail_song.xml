@@ -1,0 +1,119 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="krt.com.jtab.Fragments.DetailSongFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titlebar"
+            android:orientation="horizontal"
+
+            android:padding="4dp">
+
+            <TextView
+                android:text="   Back  "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:clickable="true"
+            />
+
+            <TextView
+                android:text="TextView"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textSize="22sp"
+                android:textColor="@color/bb_darkBackgroundColor"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/developer_icon_playbutton"
+                android:id="@+id/imageButton"
+                android:scaleType="fitXY"
+                android:layout_marginRight="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <WebView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/webView" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10sp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/adjust_bar"
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <ImageButton
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:id="@+id/imageButton2"
+                        android:padding="5dp"
+                        android:src="@drawable/button_close" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:text="+"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button2" />
+
+
+                    <Button
+                        android:text="-"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button3" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
