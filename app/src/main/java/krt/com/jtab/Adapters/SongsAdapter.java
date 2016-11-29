@@ -94,8 +94,11 @@ public class SongsAdapter extends BaseAdapter implements SectionIndexer {
 
     @Override
     public int getPositionForSection(int i) {
-        Log.d(TAG, "getPositionForSection " + i);
+
         int pos = 0;
+        if (i < 0 ) i = 0;
+        if (i >= getSections().length) i = getSections().length - 1;
+        Log.d(TAG, "getPositionForSection " + i + " " + getSections().length + " " + getCount());
         for (SongModel songModel : list)
         {
             if (songModel.getTitle().startsWith(getSections()[i])) return pos;

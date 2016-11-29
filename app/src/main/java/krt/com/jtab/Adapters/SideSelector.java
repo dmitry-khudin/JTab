@@ -43,7 +43,7 @@ public class SideSelector extends View {
         setBackgroundColor(0x00111111);
         paint = new Paint();
         paint.setColor(0xFF3F51B5);
-        paint.setTextSize(45);
+        paint.setTextSize(53);
         paint.setTextAlign(Paint.Align.CENTER);
     }
 

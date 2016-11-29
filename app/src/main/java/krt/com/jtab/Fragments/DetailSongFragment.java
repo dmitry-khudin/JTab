@@ -95,7 +95,7 @@ public class DetailSongFragment extends Fragment {
         TextView textView1 = (TextView) mainView.findViewById(R.id.textView6);
 //        textView.setMovementMethod(new ScrollingMovementMethod());
 
-        scrollView = (ScrollView) mainView.findViewById(R.id.scrollView) ;
+
 
         webView = (WebView) mainView.findViewById(R.id.webView);
 //        wv = (WebView) findViewById(R.id.webView1);

@@ -96,6 +96,9 @@ public class ArtistsAdapter extends BaseAdapter implements SectionIndexer {
     public int getPositionForSection(int i) {
         Log.d(TAG, "getPositionForSection " + i);
         int pos = 0;
+        if (i < 0) i = 0;
+        if (i >= getSections().length) i = getSections().length - 1;
+
         for (ArtistModel songModel : list)
         {
             if (songModel.getName().startsWith(getSections()[i])) return pos;
