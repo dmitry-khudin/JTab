@@ -152,7 +152,7 @@ public class SongsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.replaceFragment(3, listDataSongs.get(i), null);
+                if (!listDataSongs.get(i).isHeader()) mainActivity.replaceFragment(3, listDataSongs.get(i), null);
             }
         });
         searchFilter("");

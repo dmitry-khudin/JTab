@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import de.halfbit.pinnedsection.PinnedSectionListView;
 import krt.com.jtab.Models.SongModel;
 import krt.com.jtab.R;
 import krt.com.jtab.Utils.Constants;
@@ -23,7 +24,7 @@ import static android.content.ContentValues.TAG;
  * Created by bryden on 11/26/16.
  */
 
-public class SongsAdapter extends BaseAdapter implements SectionIndexer {
+public class SongsAdapter extends BaseAdapter implements SectionIndexer, PinnedSectionListView.PinnedSectionListAdapter {
     List<SongModel> list;
     Context mContext;
     LayoutInflater layoutInflater;
@@ -82,7 +83,13 @@ public class SongsAdapter extends BaseAdapter implements SectionIndexer {
         }
         return view;
     }
+    @Override public int getViewTypeCount() {
+        return 2;
+    }
 
+    @Override public int getItemViewType(int position) {
+        return (getItem(position).isHeader() ? 1 : 0);
+    }
     @Override
     public String[] getSections() {
         String[] chars = new String[SideSelector.ALPHABET.size()];
@@ -110,5 +117,11 @@ public class SongsAdapter extends BaseAdapter implements SectionIndexer {
     @Override
     public int getSectionForPosition(int i) {
         return 0;
+    }
+
+    @Override
+    public boolean isItemViewTypePinned(int viewType) {
+
+        return (viewType == 1);
     }
 }

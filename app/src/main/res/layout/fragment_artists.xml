@@ -46,7 +46,7 @@
             <krt.com.jtab.Adapters.SideSelector
                 android:id="@+id/side_selector"
                 android:layout_width="20dp"
-                android:layout_marginRight="5sp"
+                android:layout_marginRight="10sp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"

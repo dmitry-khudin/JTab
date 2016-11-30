@@ -111,7 +111,7 @@ public class ArtistsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.replaceFragment(4, null, listDataArtists.get(i));
+                if (!listDataArtists.get(i).isHeader()) mainActivity.replaceFragment(4, null, listDataArtists.get(i));
             }
         });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

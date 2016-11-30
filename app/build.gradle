@@ -26,6 +26,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'de.cketti.mailto:email-intent-builder:1.0.0'
+    compile "de.halfbit:pinned-section-listview:1.0.0"
     compile 'com.roughike:bottom-bar:2.0.2'
     compile 'com.android.support:support-v4:25.0.0'
     testCompile 'junit:junit:4.12'
