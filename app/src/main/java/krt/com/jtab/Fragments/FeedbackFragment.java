@@ -93,8 +93,8 @@ public class FeedbackFragment extends Fragment {
 //                    Toast.makeText(getContext(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
 //                }
                 Log.i("Send email", "");
-                String[] TO = {"poleyeffd@yahoo.com"};
-                String[] CC = {"poleyeffd@yahoo.com"};
+                String[] TO = {"jtabsapp@gmail.com"};
+                String[] CC = {};
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
                 emailIntent.setData(Uri.parse("mailto:"));
